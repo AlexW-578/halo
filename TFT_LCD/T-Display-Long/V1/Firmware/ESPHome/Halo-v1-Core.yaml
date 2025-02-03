@@ -686,7 +686,7 @@ sensor:
                 return buffer;
           - if:
               condition:
-                lambda: "return x >= 65 && x <= 75;"  # Comfortable temperature range (°F)
+                lambda: "return x >= 18 && x <= 23;"  # Comfortable temperature range (°F)
               then:
                 - lvgl.label.update:
                     id: temperature_value
@@ -694,7 +694,7 @@ sensor:
               else:
                 - if:
                     condition:
-                      lambda: "return (x > 75 && x <= 80) || (x >= 60 && x < 65);"  # Slightly uncomfortable (°F)
+                      lambda: "return (x > 23 && x <= 26) || (x >= 15 && x < 18);"  # Slightly uncomfortable (°F)
                     then:
                       - lvgl.label.update:
                           id: temperature_value
@@ -702,7 +702,7 @@ sensor:
                     else:
                       - if:
                           condition:
-                            lambda: "return (x > 80 && x <= 85) || (x >= 50 && x < 60);"  # Moderately uncomfortable (°F)
+                            lambda: "return (x > 26 && x <= 29) || (x >= 10 && x < 15);"  # Moderately uncomfortable (°F)
                           then:
                             - lvgl.label.update:
                                 id: temperature_value
