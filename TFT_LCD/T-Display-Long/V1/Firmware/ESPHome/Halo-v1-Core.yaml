@@ -4,9 +4,9 @@ substitutions:
   version: "25.5.14.1"
   device_description: ${name} - v${version}.
 
-psram:
-  mode: octal
-  speed: 120MHz
+#psram:
+#  mode: octal
+#  speed: 120MHz
 
 esp32:
   board: esp32-s3-devkitc-1
@@ -15,7 +15,7 @@ esp32:
     type: esp-idf
     advanced:
       enable_idf_experimental_features: true
-  cpu_frequency: 240MHz  # Required for 120MHz PSRAM
+  #cpu_frequency: 240MHz  # Required for 120MHz PSRAM
 
 esp32_improv:
   authorizer: none
@@ -928,8 +928,8 @@ light:
     pin: GPIO47
     default_transition_length: 0s
     chipset: WS2812
-    num_leds: 10
-    rgb_order: grb
+    num_leds: 11
+    rgb_order: rgb
     effects:
       - pulse:
           name: "Slow Pulse"
