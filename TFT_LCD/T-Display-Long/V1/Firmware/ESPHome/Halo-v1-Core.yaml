@@ -4,9 +4,9 @@ substitutions:
   version: "25.5.14.1"
   device_description: ${name} - v${version}.
 
-#psram:
-#  mode: octal
-#  speed: 120MHz
+psram:
+  mode: octal
+  speed: 80MHz
 
 esp32:
   board: esp32-s3-devkitc-1
@@ -929,7 +929,7 @@ light:
     default_transition_length: 0s
     chipset: WS2812
     num_leds: 11
-    rgb_order: rgb
+    rgb_order: grb
     effects:
       - pulse:
           name: "Slow Pulse"
