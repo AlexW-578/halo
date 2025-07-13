@@ -15,6 +15,7 @@ esp32:
     type: esp-idf
     advanced:
       enable_idf_experimental_features: true
+  cpu_frequency: 240MHz  # Required for 120MHz PSRAM
 
 esp32_improv:
   authorizer: none
